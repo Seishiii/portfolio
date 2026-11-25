@@ -31,7 +31,12 @@ a {
 }
 
 button {
-  @apply font-sans;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 img {

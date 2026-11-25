@@ -1,11 +1,31 @@
 export interface Project {
   id: number;
+  slug: string;
   title: string;
+  shortDescription: string;
   description: string;
   technologies: string[];
-  image: string;
-  href: string;
-  featured?: boolean;
+  category: string;
+
+  imageFolder: string;
+  // Automatically discovered image paths
+  images: string[];
+
+  featured: boolean;
+
+  links?: {
+    github?: string;
+    live?: string;
+  };
+
+  features?: string[];
+
+  details?: {
+    role?: string;
+    developmentPeriod?: string;
+    teamSize?: string;
+    responsibilities?: string[];
+  };
 }
 
 export interface SiteConfig {

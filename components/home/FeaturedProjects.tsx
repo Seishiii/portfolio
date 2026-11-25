@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { featuredProjects } from "@/data/site";
+import { getFeaturedProjects } from "@/data/projects";
 import ProjectCard from "@/components/ui/ProjectCard";
 
 export default function FeaturedProjects() {
+  const featuredProjects = getFeaturedProjects();
+
   return (
     <section className="site-container py-12 sm:py-16 md:py-20">
       <div className="mb-8">
